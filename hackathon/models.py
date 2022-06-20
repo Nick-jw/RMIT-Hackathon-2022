@@ -3,8 +3,13 @@ from django.db import models
 
 # Create your models here.
 
+class Companies(models.Model):
+    name = models.CharField(max_length=100)
+    stock_code = models.CharField(max_length=100)
+    
+    
 class Users(models.Model):
-    stock_code = models.CharField(max_length=50)
+    stock_code = models.ForeignKey(Companies, on_delete=models.CASCADE)
     role = models.CharField(max_length=50)
     gender = models.CharField(max_length=50) 
     salary_band = models.CharField(max_length=100)
@@ -19,6 +24,3 @@ class Users(models.Model):
     Q9 = models.IntegerField(default=-1)
     Q10 = models.IntegerField(default=-1)
 
-class Companies(models.Model):
-    name = models.CharField(max_length=100)
-    stock_code = models.ForeignKey(Users ,on_delete=models.CASCADE)

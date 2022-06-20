@@ -11,10 +11,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">EQ</a>
+    <!-- HTML for Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color: #006D77;">
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/EQ-logos_white.png" height="80" style = "padding: 0; margin: 0;"></img>
+        </a>
       
-        <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,24 +25,30 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Review</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">See Companies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">About Us</a>
             </li>
           </ul>
         </div>
     </nav>
 
+    <!-- HTML for Body -->
     <body>
-        <div class="jumbotron text-center display: flex justify-content-center">
-            <img src="../../assets/EQ-logos_black.png" height="150"></img>
-            <h1>Welcome to EQ</h1>
-            <p>Resize this responsive page to see the effect!</p>
-            <button class="btn btn-primary" a href="{% url 'about_us' %}">About Us</button>
+        <div class="jumbotron text-center">
+            <div class="">
+                <img src="../../assets/EQ-logos_black.png" height="150"></img>
+            </div>
+            <div>
+                <h1>Welcome to EQ</h1>
+                <p>We believe in ensuring that every workplace drives equality and fairness. Check how your potential employer stacks up, or review your employer to help individuals make and educated decision.</p>
+                <hr class="my-4">
+                <button class="btn btn-primary" a href="{% url 'about_us' %}">About Us</button>
+            </div>
         </div>
 
         <div class="container">

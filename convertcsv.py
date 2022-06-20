@@ -4,6 +4,6 @@ dict_from_csv = pd.read_csv(
 print(dict_from_csv)
 
 for item in dict_from_csv:
-    print("INSERT INTO *tablename (stock_code, company_anem) VALUES ({},{});".format(item, dict_from_csv[item]))
+    print("INSERT INTO *tablename (stock_code, company_name) VALUES ({},{});".format(item, dict_from_csv[item]))
 
 

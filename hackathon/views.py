@@ -8,3 +8,8 @@ from django.http import HttpResponse
 def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
+
+
+def user_form(request):
+    return render(request, 'user_form.html')
+

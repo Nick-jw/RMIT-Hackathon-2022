@@ -36,23 +36,26 @@
     </nav>
 
     <body>
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center display: flex justify-content-center">
+            <img src="../../assets/EQ-logos_black.png" height="150"></img>
             <h1>Welcome to EQ</h1>
             <p>Resize this responsive page to see the effect!</p>
-            </div>
+            <button class="btn btn-primary" a href="{% url 'about_us' %}">About Us</button>
+        </div>
 
-            <div class="container">
-                <div class="row  display: flex justify-content-center">
-                    <div class="col-sm-4">
-                        <h3>Talk about your company</h3>
-                        <p>Lorem ipsum dolor..</p>
-                        <button class="btn btn-primary" a href="{% url 'user_form' %}">Review Company</button>
+        <div class="container">
+            <div class="row  display: flex justify-content-center">
+                <div class="col-sm-4">
+                    <h3>Talk about your company</h3>
+                    <p>Lorem ipsum dolor..</p>
+                        <button class="btn btn-primary" a href="{% url 'user_form' %}">Review Company</button>                    
                     </div>
                     <div class="col-sm-4">
                         <h3 class>Check our other companies</h3>
                         <p>Lorem ipsum dolor..</p>
                         <button class = "btn btn-outline-primary" a href="{% url 'company_view' %}">See Companies</button>
                     </div>
-                </div>
+            </div>
+        </div>
     </body>
 </html>

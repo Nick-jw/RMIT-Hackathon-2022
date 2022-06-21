@@ -56,7 +56,7 @@
               <div class="card-body">
                         <h4 class="card-title">Males</h4>
                         <p class="h1">
-                          {{ Q1avg_male }}
+                          {{ Q1avg_male }}  / 6
                         </p>   
                     </div>
                 </div>
@@ -70,7 +70,7 @@
               <div class="card-body">
                         <h4 class="card-title">Females</h4>
                         <p class="h1">
-                          {{ Q1avg_female }}
+                          {{ Q1avg_female }}  / 6
                         </p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
 
         <div class="card">
             <div class="card-body text-center">
-                <h5 class="card-title">Further breakdown</h5>
+                <h5 class="card-title">Company Breakdown</h5>
                 <div class="card-columns">
                   {% if Q2avg >= 4%}
                   <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
@@ -89,8 +89,8 @@
                   <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
                   {% endif %}  
                         <div class="card-body">
-                            <h4 class="card-title">Q2</h4>
-                            <p class="h5">{{Q2avg}}</p>
+                            <h5 class="card-title">How often do you or your co-workers feel unsafe at work?</h5>
+                            <p class="h3">{{Q2avg}}  / 6</p>
                         </div>
                     </div>
                     {% if Q3avg >= 4%}
@@ -101,8 +101,8 @@
                   <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
                   {% endif %}  
                         <div class="card-body">
-                            <h4 class="card-title">Q3</h4>
-                            <p class="h5">{{Q3avg}}</p>
+                            <h5 class="card-title">Are promotions distributed on merit rather than gender?</h5>
+                            <p class="h3">{{Q3avg}}  / 6</p>
                         </div>
                     </div>
                     {% if Q4avg >= 4%}
@@ -113,8 +113,8 @@
                   <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
                   {% endif %}  
                         <div class="card-body">
-                            <h4 class="card-title">Q4</h4>
-                            <p class="h5">{{Q4avg}}</p>
+                            <h5 class="card-title">Do you feel as if company management is representative of the demographic of the company?</h5>
+                            <p class="h3">{{Q4avg}}  / 6</p>
                         </div>
                     </div>
                     {% if Q5avg >= 4%}
@@ -125,8 +125,8 @@
                   <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
                   {% endif %}  
                         <div class="card-body">
-                            <h4 class="card-title">Q5</h4>
-                            <p class="h5">{{Q5avg}}</p>
+                            <h5 class="card-title">How often do you hear of or witness individuals being bullied at the company?</h5>
+                            <p class="h3">{{Q5avg}}  / 6</p>
                         </div>
                     </div>
                     {% if Q6avg >= 4%}
@@ -137,8 +137,8 @@
                   <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
                   {% endif %}  
                         <div class="card-body">
-                            <h4 class="card-title">Q6</h4>
-                            <p class="h5">{{Q6avg}}</p>
+                            <h5 class="card-title">Are jokes that may dicriminate against someone based on their gender ever made at the company?</h5>
+                            <p class="h3">{{Q6avg}}  / 6</p>
                         </div>
                     </div>
                     {% if Q7avg >= 4%}
@@ -149,8 +149,8 @@
                   <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
                   {% endif %}  
                         <div class="card-body">
-                            <h4 class="card-title">Q7</h4>
-                            <p class="h5">{{Q7avg}}</p>
+                            <h5 class="card-title">How often have you witnessed gender-based discrimination in the workplace?</h5>
+                            <p class="h3">{{Q7avg}}  / 6</p>
                         </div>
                     </div>
                 </div>

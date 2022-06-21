@@ -1,5 +1,3 @@
-from sre_constants import CH_LOCALE
-from click import Choice
 from django import forms
 from django.forms import widgets
 

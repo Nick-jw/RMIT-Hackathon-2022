@@ -97,3 +97,47 @@ def company(request):
         }
 
     return render(request, 'company.html', form_ctx)
+
+def company1(request):
+    
+    # CSL CSL ltd
+    
+    form_data = Users.objects.filter(stock_code__exact = '77')
+    comp_data = Companies.objects.all()
+    
+    Q1avg_male = round(Users.objects.filter(stock_code__exact = '77', gender__exact = 'male').aggregate(Avg("Q1"))['Q1__avg'], 1)
+    
+    Q1avg_female = round(Users.objects.filter(stock_code__exact = '77', gender__exact = "female").aggregate(Avg("Q1"))['Q1__avg'], 1)
+    
+    Q2avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q2"))['Q2__avg'], 1)
+
+    Q3avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q3"))['Q3__avg'], 1)
+
+    Q4avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q4"))['Q4__avg'], 1)
+
+    Q5avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q5"))['Q5__avg'], 1)
+
+    Q6avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q6"))['Q6__avg'], 1)
+
+    Q7avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q7"))['Q7__avg'], 1)
+
+    Q8avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q8"))['Q8__avg'], 1)
+
+    Q9avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q9"))['Q9__avg'], 1)
+
+    
+    form_ctx = {
+        'formData': form_data,
+        'Q1avg_male': Q1avg_male,
+        'Q1avg_female': Q1avg_female,
+        'Q2avg': Q2avg,
+        'Q3avg': Q3avg,
+        'Q4avg': Q4avg,
+        'Q5avg': Q5avg,
+        'Q6avg': Q6avg,
+        'Q7avg': Q7avg,
+        'Q8avg': Q8avg,
+        'Q9avg': Q9avg
+        }
+
+    return render(request, 'company1.html', form_ctx)

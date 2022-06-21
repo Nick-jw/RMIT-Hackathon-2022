@@ -61,9 +61,9 @@ def company(request):
     form_data = Users.objects.filter(stock_code__exact = '21')
     comp_data = Companies.objects.all()
     
-    Q1avg_male = round(Users.objects.filter(stock_code__exact = '21', gender__exact = 'male').aggregate(Avg("Q1"))['Q1__avg'], 1)
+    Q1avg_male = round(Users.objects.filter(stock_code__exact = '21', gender__exact = 'male').aggregate(Avg("Q7"))['Q7__avg'], 1)
     
-    Q1avg_female = round(Users.objects.filter(stock_code__exact = '21', gender__exact = "female").aggregate(Avg("Q1"))['Q1__avg'], 1)
+    Q1avg_female = round(Users.objects.filter(stock_code__exact = '21', gender__exact = "female").aggregate(Avg("Q7"))['Q7__avg'], 1)
     
     Q2avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q2"))['Q2__avg'], 1)
 
@@ -75,7 +75,7 @@ def company(request):
 
     Q6avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q6"))['Q6__avg'], 1)
 
-    Q7avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q7"))['Q7__avg'], 1)
+    Q7avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q1"))['Q1__avg'], 1)
 
     Q8avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q8"))['Q8__avg'], 1)
 
@@ -105,9 +105,9 @@ def company1(request):
     form_data = Users.objects.filter(stock_code__exact = '77')
     comp_data = Companies.objects.all()
     
-    Q1avg_male = round(Users.objects.filter(stock_code__exact = '77', gender__exact = 'male').aggregate(Avg("Q1"))['Q1__avg'], 1)
+    Q1avg_male = round(Users.objects.filter(stock_code__exact = '77', gender__exact = 'male').aggregate(Avg("Q7"))['Q7__avg'], 1)
     
-    Q1avg_female = round(Users.objects.filter(stock_code__exact = '77', gender__exact = "female").aggregate(Avg("Q1"))['Q1__avg'], 1)
+    Q1avg_female = round(Users.objects.filter(stock_code__exact = '77', gender__exact = "female").aggregate(Avg("Q7"))['Q7__avg'], 1)
     
     Q2avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q2"))['Q2__avg'], 1)
 
@@ -119,7 +119,7 @@ def company1(request):
 
     Q6avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q6"))['Q6__avg'], 1)
 
-    Q7avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q7"))['Q7__avg'], 1)
+    Q7avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q1"))['Q1__avg'], 1)
 
     Q8avg = round(Users.objects.filter(stock_code__exact = '77').aggregate(Avg("Q8"))['Q8__avg'], 1)
 

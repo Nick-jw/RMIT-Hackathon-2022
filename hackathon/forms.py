@@ -120,12 +120,12 @@ class InputForm(forms.Form):
 
     question_7 = forms.ChoiceField(label="Q7: How would you rate the company culture?",
                                    choices=[
-                                       (1, 'Very good'),
-                                       (2, 'Pretty good'),
-                                       (3, 'Not bad'),
-                                       (4, 'Okay'),
-                                       (5, 'Sub-par'),
-                                       (6, 'Terrible')],
+                                       (6, 'Very good'),
+                                       (5, 'Pretty good'),
+                                       (4, 'Not bad'),
+                                       (3, 'Okay'),
+                                       (2, 'Sub-par'),
+                                       (1, 'Terrible')],
                                    widget=forms.RadioSelect
                                    )
 

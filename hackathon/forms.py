@@ -1,7 +1,6 @@
 from django import forms
 from django.forms import widgets
 
-
 CHOICES = [('one', 'One'), ('two', 'Two')]
 
 # creating a form ""
@@ -24,7 +23,7 @@ class InputForm(forms.Form):
                                ('software developer', 'Software Developer'),
                                ('lead engineer', 'Lead Engineer'),
                                ('junior engineer', 'Junior Engineer'),
-                               ('qa tester', 'QA Tester')]
+                               ('qa tester', 'QA Tester')],
                            )
                            )
     gender = forms.CharField(label="Please select your Gender",
@@ -121,12 +120,12 @@ class InputForm(forms.Form):
 
     question_7 = forms.ChoiceField(label="Q7: How would you rate the company culture?",
                                    choices=[
-                                       (1, 'Terrible'),
-                                       (2, 'Sub-par'),
-                                       (3, 'Okay'),
-                                       (4, 'Not bad'),
-                                       (5, 'Pretty good'),
-                                       (6, 'Very good')],
+                                       (1, 'Very good'),
+                                       (2, 'Pretty good'),
+                                       (3, 'Not bad'),
+                                       (4, 'Okay'),
+                                       (5, 'Sub-par'),
+                                       (6, 'Terrible')],
                                    widget=forms.RadioSelect
                                    )
 

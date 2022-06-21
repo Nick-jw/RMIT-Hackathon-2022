@@ -26,13 +26,13 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Review</a>
+              <a class="nav-link" href = "{% url 'user_form' %}">Review Company</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">See Companies</a>
+              <a class="nav-link" href="{% url 'company' %}">View Company</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
             </li>
           </ul>
         </div>
@@ -49,7 +49,7 @@
                 <p>Review your company based on factors relating to eqaulity and help others make educated decisions on where and who to work for.</p>
                 <p>Each company that is reviewed is given a score out of 100 indicating how strong hey are in the field of gender diversity and safety.</p>
                 <hr class="my-4">
-                <button class="btn btn-primary">Review Your Company</button>
+                <a class="btn btn-primary" href = "{% url 'user_form' %}">Review Your Company</a>
                 <a class="btn btn-outline-primary" href = "{% url 'about_us' %}">About Us</a>
             </div>
         </div>
@@ -65,7 +65,7 @@
               <p>
                 Fill out our questionaire and review your company based on their gender equality.
               </p>
-              <button class = 'btn btn-primary'>Review</button>
+              <a class="btn btn-primary" href = "{% url 'user_form' %}">Review</a>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
                 This is a longer card with supporting text below as a natural lead-in to
                 additional content. This content is a little bit longer.
               </p>
-              <button class = 'btn btn-outline-primary'>View</button>
+              <a class="btn btn-primary" href = "{% url 'company' %}">View</a>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.template import loader
+from hackathon.models import Companies, Users
 from .forms import InputForm
 from .models import Companies, Users
 
@@ -40,3 +41,11 @@ def user_form(request):
         context = {}
         context['form'] = InputForm()
         return render(request, "user_form.html", context)
+    
+def company(request):
+    form_data = Users.objects.all()
+    comp_data = Companies.objects.all()
+    
+    form_ctx = {'formData': form_data}
+    comp_ctx = {'compData': comp_data}
+    return render(request, 'company.html', form_ctx)

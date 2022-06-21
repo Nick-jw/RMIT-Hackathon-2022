@@ -61,25 +61,25 @@ def company(request):
     form_data = Users.objects.filter(stock_code__exact = '21')
     comp_data = Companies.objects.all()
     
-    Q1avg_male = Users.objects.filter(stock_code__exact = '21', gender__exact = 'male').aggregate(Avg("Q1"))['Q1__avg']
-    print(Q1avg_male)
-    Q1avg_female = Users.objects.filter(stock_code__exact = '21', gender__exact = "female").aggregate(Avg("Q1"))['Q1__avg']
+    Q1avg_male = round(Users.objects.filter(stock_code__exact = '21', gender__exact = 'male').aggregate(Avg("Q1"))['Q1__avg'], 1)
     
-    Q2avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q2"))['Q2__avg']
+    Q1avg_female = round(Users.objects.filter(stock_code__exact = '21', gender__exact = "female").aggregate(Avg("Q1"))['Q1__avg'], 1)
+    
+    Q2avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q2"))['Q2__avg'], 1)
 
-    Q3avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q3"))['Q3__avg']
+    Q3avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q3"))['Q3__avg'], 1)
 
-    Q4avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q4"))['Q4__avg']
+    Q4avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q4"))['Q4__avg'], 1)
 
-    Q5avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q5"))['Q5__avg']
+    Q5avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q5"))['Q5__avg'], 1)
 
-    Q6avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q6"))['Q6__avg']
+    Q6avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q6"))['Q6__avg'], 1)
 
-    Q7avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q7"))['Q7__avg']
+    Q7avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q7"))['Q7__avg'], 1)
 
-    Q8avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q8"))['Q8__avg']
+    Q8avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q8"))['Q8__avg'], 1)
 
-    Q9avg = Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q9"))['Q9__avg']
+    Q9avg = round(Users.objects.filter(stock_code__exact = '21').aggregate(Avg("Q9"))['Q9__avg'], 1)
 
     
     form_ctx = {

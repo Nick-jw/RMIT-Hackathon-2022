@@ -47,9 +47,85 @@
             <div class="row  display: flex justify-content-center">
                 <div class="col-sm">        
                     <form action = "" method = "post">
-                        {% csrf_token %}
+                        <!-- {% csrf_token %}
                         {{form }}
-                        <input type="submit" value=Submit">
+                        {{ form.non_field_errors }} -->
+
+                        <!-- {{ form }} -->
+                        {{ form.non_field_errors }}
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.company_name.errors}}
+                            {{form.company_name.label_tag}}
+                            {{form.company_name}}
+                        </div>
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.role.errors}}
+                            {{form.role.label_tag}}
+                            {{form.role}}
+                        </div>
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.gender.errors}}
+                            {{form.gender.label_tag}}
+                            {{form.gender}}
+                        </div>
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_1.errors}}
+                            {{form.question_1.label_tag}}
+                            {{form.question_1}}
+                        </div>
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_2.errors}}
+                            {{form.question_2.label_tag}}
+                            {{form.question_2}}
+                        </div>
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_3.errors}}
+                            {{form.question_3.label_tag}}
+                            {{form.question_3}}
+                        </div>
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_4.errors}}
+                            {{form.question_4.label_tag}}
+                            {{form.question_4}}
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_5.errors}}
+                            {{form.question_5.label_tag}}
+                            {{form.question_5}}
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_6.errors}}
+                            {{form.question_6.label_tag}}
+                            {{form.question_6}}
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_7.errors}}
+                            {{form.question_7.label_tag}}
+                            {{form.question_7}}
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_8.errors}}
+                            {{form.question_8.label_tag}}
+                            {{form.question_8}}
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_9.errors}}
+                            {{form.question_9.label_tag}}
+                            {{form.question_9}}
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control fieldWrapper">
+                            {{form.question_10.errors}}
+                            {{form.question_10.label_tag}}
+                            {{form.question_10}}
+                        </div>
+
+                        <input type="submit" value=Submit>
                     </form>
                 </div>
             </div>

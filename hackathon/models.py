@@ -22,5 +22,5 @@ class Users(models.Model):
     Q7 = models.CharField(max_length=100)
     Q8 = models.CharField(max_length=100)
     Q9 = models.CharField(max_length=100)
-    Q10 = models.IntegerField(default=-1)
+    Q10 = models.CharField(max_length=100)
 

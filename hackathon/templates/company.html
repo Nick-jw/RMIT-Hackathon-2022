@@ -39,73 +39,27 @@
 
     <!-- HTML for Body -->
     <body>
-        <div class="jumbotron-small text-center">
-            <h1 class="display-3">{Company name}</h1>
-            <p class="lead">{Ticker symbol}</p>
+        <div class="jumbotron text-center">   
+            <h1 class="display-3">Afterpay Ltd</h1>
+            <p class="lead">APT</p>
         </div>
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Male statistic</h4>
-                    <p class="card-text">Text</p>   
+        <div class='jumbotron-small text-center'>
+          <p class="h3">Company Culture Rating</p>
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Male statistic</h4>
+                        <p class="card-text">
+                          {{ Q1avg_male }}
+                        </p>   
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Female statistic</h4>
-                    <p class="card-text">Text</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="">
-            <div class="card-body text-center">
-                <h5 class="card-title">Further breakdown</h5>
-                <div class="card-columns">
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Female statistic</h4>
+                        <p class="card-text">
+                          {{ Q1avg_female }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -116,48 +70,58 @@
                 <h5 class="card-title">Further breakdown</h5>
                 <div class="card-columns">
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Title</h4>
                             <p class="card-text">Text</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Title</h4>
                             <p class="card-text">Text</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Title</h4>
                             <p class="card-text">Text</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Title</h4>
                             <p class="card-text">Text</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Title</h4>
                             <p class="card-text">Text</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Title</h4>
                             <p class="card-text">Text</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Further breakdown</h5>
+                {%for entry in formData %}
+                    <div class="card">
+                        <img class="card-img-top" src="holder.js/100x180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Review card</h4>
+                            <p class="card-text">{{entry.Q1}}</p>
+                        </div>
+                    </div>
+                {%endfor%}
+
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="eng">
-    {% load static %}
+  {% load static %}
     <head>
         <title>Bootstrap Example</title>
         <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <!-- HTML for Navbar -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color: #006D77;">
         <a class="navbar-brand" href="#">
-            <img src="{% static 'EQ-logos_white.png' %}" height="80" style = "padding: 0; margin: 0;"></img>
+            <img src="../../assets/EQ-logos_white.png" height="80" style = "padding: 0; margin: 0;"></img>
         </a>
       
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -41,56 +41,53 @@
     <!-- HTML for Body -->
     <body>
         <div class="jumbotron text-center">
-            <div class="">
-                <img src="{% static 'EQ-logos_black.png' %}" height="150"></img>
-            </div>
             <div>
-                <h1>Welcome to EQ</h1>
-                <p>Review your company based on factors relating to eqaulity and help others make educated decisions on where and who to work for.</p>
-                <p>Each company that is reviewed is given a score out of 100 indicating how strong hey are in the field of gender diversity and safety.</p>
+                <h1>About Us</h1>
+                <p>We believe in ensuring that every workplace drives equality and fairness. Check how your potential employer stacks up, or review your employer to help individuals make and educated decision.</p>
                 <hr class="my-4">
-                <button class="btn btn-primary">Review Your Company</button>
-                <button class="btn btn-outline-primary" href = "{% url 'about_us' %}">About Us</button>
+                <button class="btn btn-primary" a href="{% url 'about_us' %}">See Your Company</button>
+                <button class = "btn btn-outline-primary">Review Your Company</button>
             </div>
         </div>
     </body>
 
     <body>
-      <div class="row card-columns-small">
-        <div class="col">
-          <div class="card text-center">
-            <img src="{% static 'Cover-illustration.jpg' %}" class="card-img-top"/>
-            <div class="card-body">
-              <h5 class="card-title">Review Your Company</h5>
-              <p>
-                Fill out our questionaire and review your company based on their gender equality.
-              </p>
-              <button class = 'btn btn-primary'>Review</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card text-center">
-            <img src="{% static 'GenderEquality02-1.jpg' %}" class="card-img-top" style="max-height: 425px;"/>
-            <div class="card-body">
-              <h5 class="card-title">View Your Company</h5>
-              <p>
-                This is a longer card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-              </p>
-              <button class = 'btn btn-outline-primary'>View</button>
-            </div>
-          </div>
-        </div>
+      <div>
+        <img src="{% static 'Cover-illustration.jpg' %}"></img>
       </div>
     </body>
 
-    <div class="seperator" style="margin-top:80px;"></div>
-    
+    <body>
+      <div class="jumbotron text-center">
+        <h2>Why are we doing this?</h2>
+      </div>
+      <div>
+        <p> Women leave stem jobs at twice the rate that men do. We want to reduce this by providing transparency and information regarding companies so both men and women can make educated decisions and work for companies that champion gender equality.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere iusto provident, quam aliquam at eos dignissimos, aut odio laudantium ullam laboriosam, maxime sapiente nulla reprehenderit omnis consequatur accusantium quo consectetur.</p>
+      </div>
+    </body>
+
+    <body>
+      <div>
+        <img src="{% static 'GenederEquality02-1.jpg' %}" style = ></img>
+      </div>
+    </body>
+
+    <body>
+      <div class="jumbotron text-center">
+        <h2>About our Equality Index</h2>
+      </div>
+      <div>
+        <p>Our equality index tracks several key factors that matter for everyone in the workplace. Reports of discrimination, bullying and inequality all negatively affect a companies equality index. Once enough data is collected a companies rating and reviews can be viewed by anyone.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere iusto provident, quam aliquam at eos dignissimos, aut odio laudantium ullam laboriosam, maxime sapiente nulla reprehenderit omnis consequatur accusantium quo consectetur.</p>
+      </div>
+    </body>
+
+    <div class="seperator" style="margin-top:100px;"></div>
 
     <!-- HTML for Footer -->
     <body>
-        <footer class="page-footer font-small bg-dark pt-4 text-light">
+        <footer class="page-footer font-small bg-dark pt-4 text-light" style="margin: 0;">
             <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
 

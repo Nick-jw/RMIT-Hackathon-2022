@@ -46,18 +46,30 @@
         <div class='jumbotron-small text-center'>
           <p class="h3">Company Culture Rating</p>
             <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Male statistic</h4>
-                        <p class="card-text">
+              {% if Q1avg_male >= 4%}
+                <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+              {% elif Q1avg_male <= 2 %}
+                <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+              {% else %}
+                <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+              {% endif %}  
+              <div class="card-body">
+                        <h4 class="card-title">Males</h4>
+                        <p class="h1">
                           {{ Q1avg_male }}
                         </p>   
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Female statistic</h4>
-                        <p class="card-text">
+                {% if Q1avg_female >= 4%}
+                <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+              {% elif Q1avg_female <= 2 %}
+                <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+              {% else %}
+                <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+              {% endif %}  
+              <div class="card-body">
+                        <h4 class="card-title">Females</h4>
+                        <p class="h1">
                           {{ Q1avg_female }}
                         </p>
                     </div>
@@ -69,40 +81,76 @@
             <div class="card-body text-center">
                 <h5 class="card-title">Further breakdown</h5>
                 <div class="card-columns">
-                    <div class="card">
+                  {% if Q2avg >= 4%}
+                  <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+                  {% elif Q2avg <= 2 %}
+                  <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+                  {% else %}
+                  <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+                  {% endif %}  
                         <div class="card-body">
                             <h4 class="card-title">Q2</h4>
-                            <p class="card-text">{{Q2avg}}</p>
+                            <p class="h5">{{Q2avg}}</p>
                         </div>
                     </div>
-                    <div class="card">
+                    {% if Q3avg >= 4%}
+                  <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+                  {% elif Q3avg <= 2 %}
+                  <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+                  {% else %}
+                  <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+                  {% endif %}  
                         <div class="card-body">
                             <h4 class="card-title">Q3</h4>
-                            <p class="card-text">{{Q3avg}}</p>
+                            <p class="h5">{{Q3avg}}</p>
                         </div>
                     </div>
-                    <div class="card">
+                    {% if Q4avg >= 4%}
+                  <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+                  {% elif Q4avg <= 2 %}
+                  <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+                  {% else %}
+                  <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+                  {% endif %}  
                         <div class="card-body">
                             <h4 class="card-title">Q4</h4>
-                            <p class="card-text">{{Q4avg}}</p>
+                            <p class="h5">{{Q4avg}}</p>
                         </div>
                     </div>
-                    <div class="card">
+                    {% if Q5avg >= 4%}
+                  <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+                  {% elif Q5avg <= 2 %}
+                  <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+                  {% else %}
+                  <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+                  {% endif %}  
                         <div class="card-body">
                             <h4 class="card-title">Q5</h4>
-                            <p class="card-text">{{Q5avg}}</p>
+                            <p class="h5">{{Q5avg}}</p>
                         </div>
                     </div>
-                    <div class="card">
+                    {% if Q6avg >= 4%}
+                  <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+                  {% elif Q6avg <= 2 %}
+                  <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+                  {% else %}
+                  <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+                  {% endif %}  
                         <div class="card-body">
                             <h4 class="card-title">Q6</h4>
-                            <p class="card-text">{{Q6avg}}</p>
+                            <p class="h5">{{Q6avg}}</p>
                         </div>
                     </div>
-                    <div class="card">
+                    {% if Q7avg >= 4%}
+                  <div class="card text-white bg-success mx-auto" style="max-width: 25rem;">
+                  {% elif Q7avg <= 2 %}
+                  <div class="card text-white bg-danger mx-auto" style="max-width: 25rem;">
+                  {% else %}
+                  <div class="card text-white bg-warning mx-auto" style="max-width: 25rem;">
+                  {% endif %}  
                         <div class="card-body">
                             <h4 class="card-title">Q7</h4>
-                            <p class="card-text">{{Q7avg}}</p>
+                            <p class="h5">{{Q7avg}}</p>
                         </div>
                     </div>
                 </div>

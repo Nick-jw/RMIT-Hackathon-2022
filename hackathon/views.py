@@ -48,7 +48,7 @@ def user_form(request):
             # print(form.cleaned_data)
             # for i in form.cleaned_data:
             #    print(i)
-            return HttpResponseRedirect('/admin/')
+            return HttpResponseRedirect('/hackathon/')
     else:
         context = {}
         context['form'] = InputForm()

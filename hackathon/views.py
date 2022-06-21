@@ -12,6 +12,10 @@ def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
 
+def about_us(request):
+    template = loader.get_template('about_us.html')
+    return HttpResponse(template.render())
+
 def user_form(request):
     if request.method == "POST":
         form = InputForm(request.POST)

@@ -141,3 +141,6 @@ def company1(request):
         }
 
     return render(request, 'company1.html', form_ctx)
+
+def fakeFunc():
+    print('null')
